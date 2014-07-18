@@ -8,6 +8,7 @@
  *
  * @author Ed. Chamo
  */
-public class StackVector {
+public class StackVector <E> implements Stack <E> {
+    protected StackVector<E> data;
     
 }
