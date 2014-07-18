@@ -8,7 +8,21 @@
  *
  * @author Ed. Chamo
  */
+import java.util.*;
+
 public class StackVector <E> implements Stack <E> {
-    protected StackVector<E> data;
+    protected Vector <E> data;
+    
+    public StackVector()
+    //post: construye un nuevo vectro vacio
+    {
+        data = new Vector<E>();
+    }
+    
+    public void push (E item){
+        //post: el valor es agregado al stack
+        
+        data.add(item);//cambiarlo
+    }
     
 }
