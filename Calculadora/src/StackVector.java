@@ -11,7 +11,6 @@
 public class StackVector <E> implements Stack <E> {
     protected StackVector<E> data;
 
-    @Override
     public void push(E item) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -35,5 +34,6 @@ public class StackVector <E> implements Stack <E> {
     public int size() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     
 }
