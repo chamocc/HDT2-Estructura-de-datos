@@ -22,7 +22,7 @@ class Calculadora {
       try {
          // Apertura del fichero y creacion de BufferedReader para poder
          // hacer una lectura comoda (disponer del metodo readLine()).
-         archivo = new File ("C:\\Users\\Daniel\\Documents\\Daniel pers\\U\\Segundo año\\Segundo Semestre\\Estructuras de Datos\\Hojas de Trabajo\\Hoja 2\\HDT2-Estructura-de-datos\\datos.txt");
+         archivo = new File ("C:\\Users\\Ed. Chamo\\Desktop\\Trabajos GitHub\\HDT2-Estructura-de-datos\\datos.txt");
          fr = new FileReader (archivo);
          br = new BufferedReader(fr);
  
