@@ -67,14 +67,18 @@ class Calculadora {
            }else{
                if(chars[i]== '+' || chars[i]== '-' || chars[i]== '*' || chars[i]== '/'){
                int op2=datos.pop();
+               //System.out.println(op2);
                int op1=datos.pop();
-               resultados.add(verificarOperacion(op1, op2, chars[i]));
-           }else{
-                   int dat=(int)chars[i];
+               //System.out.println(op1);
+               datos.push(verificarOperacion(op1, op2, chars[i]));
+               }else{
+                   int datascii=(int)chars[i];
+                   int dat =Character.getNumericValue(datascii);
                    datos.push(dat);
                }
            }
        }
+       resultados.add(datos.pop());
        
    }
    
@@ -90,13 +94,13 @@ class Calculadora {
            resultado=op1*op2;
        }
        if(car=='/'){
-           resultado=op1/op2;
+           resultado=(int)op1/op2;
        }
        return resultado;
    }
    
    private static void imprimir(){
-       for(int i=(resultados.size()-1); i>=0; i--){
+       for(int i=0; i<resultados.size(); i++){
            System.out.println("Resuldato:\n"+resultados.get(i));
        }
    }
