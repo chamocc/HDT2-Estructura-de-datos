@@ -96,7 +96,7 @@ class Calculadora {
    }
    
    private static void imprimir(){
-       for(int i=resultados.size(); i>=0; i--){
+       for(int i=(resultados.size()-1); i>=0; i--){
            System.out.println("Resuldato:\n"+resultados.get(i));
        }
    }
