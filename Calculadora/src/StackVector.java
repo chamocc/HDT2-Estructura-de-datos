@@ -29,8 +29,8 @@ public class StackVector <E> implements Stack <E> {
 
     @Override
     public E pop() {
-        //post: hay algo en el stack
-        //pre: se extrae el primer elemento del stack
+        //pre: hay algo en el stack
+        //post: se extrae el primer elemento del stack
         if (data.isEmpty() == true)
         {
             return null;
@@ -46,9 +46,15 @@ public class StackVector <E> implements Stack <E> {
 
     @Override
     public E peek() {
-        //pre:
-        //post:
-        return data.elementAt(index);   
+        //pre: hay algo en el stack
+        //post: se lee el primer elemento en el stack
+         if (data.isEmpty() == true)
+        {
+            return null;
+        }
+        else {  
+        return data.elementAt(index-1);
+         }
     }
 
     @Override
