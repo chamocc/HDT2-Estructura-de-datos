@@ -1,5 +1,5 @@
 /*
- *Ejempl tomado de página:
+ *Ejemplo tomado de página:
 *http://chuwiki.chuidiang.org/index.php?title=Lectura_y_Escritura_de_Ficheros_en_Java
 */
 import java.io.*;
@@ -18,6 +18,7 @@ class Calculadora {
       datos= new StackVector<Integer>();
       resultados=new ArrayList<Integer>();
  
+      //Comienza código tomado de internet
       try {
          // Apertura del fichero y creacion de BufferedReader para poder
          // hacer una lectura comoda (disponer del metodo readLine()).
@@ -46,6 +47,7 @@ class Calculadora {
             e2.printStackTrace();
          }
       }
+      //termina codigo tomado dd internet
       
       while(!operaciones.empty()){
           operarLinea();
