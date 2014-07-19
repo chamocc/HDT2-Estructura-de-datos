@@ -45,8 +45,12 @@ public class StackVectorTest {
         Object item = null;
         StackVector instance = new StackVector();
         instance.push(item);
+        boolean val=false;
+        if(instance.size()==1)
+            val=true;
+        assertTrue(val);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -58,9 +62,19 @@ public class StackVectorTest {
         StackVector instance = new StackVector();
         Object expResult = null;
         Object result = instance.pop();
-        assertEquals(expResult, result);
+        boolean val1=false;
+        boolean val2=false;
+        if(result == null){
+            val1=true;
+        }
+        Object item=3;
+        instance.push(item);
+        result= instance.pop();
+        if(result==item && instance.empty()==true){
+            val2=true;
+        }
+        assertTrue(val1 && val2);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -70,11 +84,15 @@ public class StackVectorTest {
     public void testPeek() {
         System.out.println("peek");
         StackVector instance = new StackVector();
-        Object expResult = null;
-        Object result = instance.peek();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Object item=null;
+        instance.push(item);
+        boolean val=false;
+        if(instance.peek()==item && instance.size()==1){
+            val=true;
+        }
+        assertTrue(val);
+        
+
     }
 
     /**
@@ -84,11 +102,9 @@ public class StackVectorTest {
     public void testEmpty() {
         System.out.println("empty");
         StackVector instance = new StackVector();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.empty();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -101,8 +117,6 @@ public class StackVectorTest {
         int expResult = 0;
         int result = instance.size();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
