@@ -31,7 +31,7 @@ public class StackVector <E> implements Stack <E> {
     public E pop() {
         //post: hay algo en el stack
         //pre: se extrae el primer elemento del stack
-        if (data.isEmpty() ==true)
+        if (data.isEmpty() == true)
         {
             return null;
         }
@@ -53,12 +53,16 @@ public class StackVector <E> implements Stack <E> {
 
     @Override
     public boolean empty() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //pre:
+        //post: regresa true si el stack se encuentra vacio
+        return data.isEmpty();
     }
 
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //pre:
+        //post: regresa la cantidad de datos presentes en el stack
+        return data.size();
     }
 
     
